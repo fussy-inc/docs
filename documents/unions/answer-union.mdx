@@ -1,0 +1,90 @@
+---
+id: answer-union
+title: AnswerUnion
+hide_table_of_contents: false
+pagination_next: null
+pagination_prev: null
+---
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+Union of answer types
+
+
+```graphql
+union AnswerUnion = DateAnswer | ImageUrlAnswer | LocationAnswer | LongTextAnswer | NumberAnswer | ReferenceAnswer | ShortTextAnswer | TextAnswer | UrlAnswer
+```
+
+
+### Possible types
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>DateAnswer</b></code>](/objects/date-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>ImageUrlAnswer</b></code>](/objects/image-url-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>LocationAnswer</b></code>](/objects/location-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>LongTextAnswer</b></code>](/objects/long-text-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>NumberAnswer</b></code>](/objects/number-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>ReferenceAnswer</b></code>](/objects/reference-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>ShortTextAnswer</b></code>](/objects/short-text-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>TextAnswer</b></code>](/objects/text-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerUnion.<b>UrlAnswer</b></code>](/objects/url-answer) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`Response`](/objects/response)  <Badge class="secondary" text="object"/>
+

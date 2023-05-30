@@ -1,0 +1,52 @@
+---
+id: string
+title: String
+hide_table_of_contents: false
+pagination_next: null
+pagination_prev: null
+---
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+
+```graphql
+scalar String
+```
+
+
+
+
+### Member of
+
+[`Category`](/objects/category)  <Badge class="secondary" text="object"/><Bullet />[`CreateFormInput`](/inputs/create-form-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateFormPayload`](/objects/create-form-payload)  <Badge class="secondary" text="object"/><Bullet />[`CreateResponseInput`](/inputs/create-response-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateResponsePayload`](/objects/create-response-payload)  <Badge class="secondary" text="object"/><Bullet />[`deprecated`](/directives/deprecated)  <Badge class="secondary" text="directive"/><Bullet />[`Form`](/objects/form)  <Badge class="secondary" text="object"/><Bullet />[`FormInput`](/inputs/form-input)  <Badge class="secondary" text="input"/><Bullet />[`ImageUrlAnswer`](/objects/image-url-answer)  <Badge class="secondary" text="object"/><Bullet />[`IssueFussyAccessTokenInput`](/inputs/issue-fussy-access-token-input)  <Badge class="secondary" text="input"/><Bullet />[`IssueFussyAccessTokenPayload`](/objects/issue-fussy-access-token-payload)  <Badge class="secondary" text="object"/><Bullet />[`LongTextAnswer`](/objects/long-text-answer)  <Badge class="secondary" text="object"/><Bullet />[`Question`](/objects/question)  <Badge class="secondary" text="object"/><Bullet />[`QuestionInput`](/inputs/question-input)  <Badge class="secondary" text="input"/><Bullet />[`ShortTextAnswer`](/objects/short-text-answer)  <Badge class="secondary" text="object"/><Bullet />[`specifiedBy`](/directives/specified-by)  <Badge class="secondary" text="directive"/><Bullet />[`TextAnswer`](/objects/text-answer)  <Badge class="secondary" text="object"/><Bullet />[`TextAnswerInput`](/inputs/text-answer-input)  <Badge class="secondary" text="input"/><Bullet />[`UrlAnswer`](/objects/url-answer)  <Badge class="secondary" text="object"/><Bullet />[`User`](/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`userByAccessToken`](/queries/user-by-access-token)  <Badge class="secondary" text="query"/>
+

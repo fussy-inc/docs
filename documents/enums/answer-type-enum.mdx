@@ -1,0 +1,102 @@
+---
+id: answer-type-enum
+title: AnswerTypeEnum
+hide_table_of_contents: false
+pagination_next: null
+pagination_prev: null
+---
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+No description
+
+
+```graphql
+enum AnswerTypeEnum {
+  date
+  image_url
+  location
+  long_text
+  number
+  reference
+  short_text
+  text @deprecated
+  url
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>date</b></code>](#) 
+> Date
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>image_url</b></code>](#) 
+> Image URL
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>location</b></code>](#) 
+> Location
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>long_text</b></code>](#) 
+> Long Text
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>number</b></code>](#) 
+> Number
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>reference</b></code>](#) 
+> Reference
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>short_text</b></code>](#) 
+> Short Text
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>text</b></code>](#) <Badge class="secondary" text="deprecated"/>
+> <Badge class="warning" text="DEPRECATED: Use SHORT_TEXT or LONG_TEXT instead"/>
+> 
+> Text
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerTypeEnum.<b>url</b></code>](#) 
+> URL
+> 
+
+
+
+### Member of
+
+[`AnswerInput`](/inputs/answer-input)  <Badge class="secondary" text="input"/><Bullet />[`Question`](/objects/question)  <Badge class="secondary" text="object"/><Bullet />[`QuestionInput`](/inputs/question-input)  <Badge class="secondary" text="input"/>
+

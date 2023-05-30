@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[286],{8129:n=>{n.exports=JSON.parse('{"title":"Unions overview","slug":"/category/unions","permalink":"/docs/category/unions","navigation":{"previous":{"title":"String","permalink":"/docs/scalars/string"},"next":{"title":"AnswerUnion","permalink":"/docs/unions/answer-union"}}}')}}]);

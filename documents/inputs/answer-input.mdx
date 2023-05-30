@@ -1,0 +1,90 @@
+---
+id: answer-input
+title: AnswerInput
+hide_table_of_contents: false
+pagination_next: null
+pagination_prev: null
+---
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+No description
+
+
+```graphql
+input AnswerInput {
+  answerTypeEnum: AnswerTypeEnum!
+  dateAnswer: DateAnswerInput
+  locationAnswer: LocationAnswerInput
+  numberAnswer: NumberAnswerInput
+  questionId: Int!
+  referenceAnswer: ReferenceAnswerInput
+  textAnswer: TextAnswerInput
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>answerTypeEnum</b></code>](#)<Bullet />[`AnswerTypeEnum!`](/enums/answer-type-enum) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>dateAnswer</b></code>](#)<Bullet />[`DateAnswerInput`](/inputs/date-answer-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>locationAnswer</b></code>](#)<Bullet />[`LocationAnswerInput`](/inputs/location-answer-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>numberAnswer</b></code>](#)<Bullet />[`NumberAnswerInput`](/inputs/number-answer-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>questionId</b></code>](#)<Bullet />[`Int!`](/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>referenceAnswer</b></code>](#)<Bullet />[`ReferenceAnswerInput`](/inputs/reference-answer-input) <Badge class="secondary" text="input"/>
+> reference to response
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>AnswerInput.<b>textAnswer</b></code>](#)<Bullet />[`TextAnswerInput`](/inputs/text-answer-input) <Badge class="secondary" text="input"/>
+> accept answer type short text, long text, url, image url
+> 
+
+
+
+### Member of
+
+[`CreateResponseInput`](/inputs/create-response-input)  <Badge class="secondary" text="input"/>
+

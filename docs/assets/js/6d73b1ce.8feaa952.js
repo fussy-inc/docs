@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[9386],{7872:e=>{e.exports=JSON.parse('{"title":"Scalars overview","slug":"/category/scalars","permalink":"/docs/category/scalars","navigation":{"previous":{"title":"userByAccessToken","permalink":"/docs/queries/user-by-access-token"},"next":{"title":"Boolean","permalink":"/docs/scalars/boolean"}}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[9342],{9691:t=>{t.exports=JSON.parse('{"title":"Mutations overview","slug":"/category/mutations","permalink":"/docs/category/mutations","navigation":{"previous":{"title":"TextAnswerInput","permalink":"/docs/inputs/text-answer-input"},"next":{"title":"createForm","permalink":"/docs/mutations/create-form"}}}')}}]);
