@@ -113,7 +113,7 @@ FUSSY API でアクセスできる主なデータの構造について説明し�
 
 FUSSY API でアクセスできるデータの構造は次の図のようになっています。
 
-![](https://static.fussy.fun/api/docs/images/system-description.png)
+![](https://d1stpor4o81wuq.cloudfront.net/api/docs/images/system-description.png)
 
 FUSSY のサービス上では、データベースとその投稿という構造で見せていますが、API としては投稿フォームとその回答という命名を採用しています。
 
