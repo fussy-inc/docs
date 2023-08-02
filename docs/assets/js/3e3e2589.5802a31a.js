@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[3989],{6813:e=>{e.exports=JSON.parse('{"title":"Objects overview","slug":"/category/objects","permalink":"/docs/category/objects","navigation":{"previous":{"title":"writeBlogWithLlm","permalink":"/docs/mutations/write-blog-with-llm"},"next":{"title":"Category","permalink":"/docs/objects/category"}}}')}}]);

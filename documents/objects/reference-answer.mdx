@@ -46,6 +46,7 @@ type ReferenceAnswer {
   position: Int!
   question: Question!
   questionId: Int!
+  referencedResponse: Response!
   response: Response!
   responseId: Int!
   updatedAt: ISO8601DateTime!
@@ -74,6 +75,10 @@ type ReferenceAnswer {
 
 #### [<code style={{ fontWeight: 'normal' }}>ReferenceAnswer.<b>questionId</b></code>](#)<Bullet />[`Int!`](/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>ReferenceAnswer.<b>referencedResponse</b></code>](#)<Bullet />[`Response!`](/objects/response) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> referenced response
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>ReferenceAnswer.<b>response</b></code>](#)<Bullet />[`Response!`](/objects/response) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[1442],{7522:e=>{e.exports=JSON.parse('{"title":"Queries overview","slug":"/category/queries","permalink":"/docs/category/queries","navigation":{"previous":{"title":"User","permalink":"/docs/objects/user"},"next":{"title":"categories","permalink":"/docs/queries/categories"}}}')}}]);

@@ -42,8 +42,11 @@ No description
 ```graphql
 responses(
   categoryIds: [Int!]
+  formIds: [Int!]
   ids: [Int!]
   locationNearby: LocationNearInput
+  order: OrderEnum
+  userIds: [Int!]
 ): [Response!]!
 ```
 
@@ -54,12 +57,24 @@ responses(
 > filter by category ids
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>responses.<b>formIds</b></code>](#)<Bullet />[`[Int!]`](/scalars/int) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> filter by form ids
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>responses.<b>ids</b></code>](#)<Bullet />[`[Int!]`](/scalars/int) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>responses.<b>locationNearby</b></code>](#)<Bullet />[`LocationNearInput`](/inputs/location-near-input) <Badge class="secondary" text="input"/>
 > filter by location nearby
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>responses.<b>order</b></code>](#)<Bullet />[`OrderEnum`](/enums/order-enum) <Badge class="secondary" text="enum"/>
+> sort by create_at
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>responses.<b>userIds</b></code>](#)<Bullet />[`[Int!]`](/scalars/int) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> filter by user ids
 > 
 
 ### Type
