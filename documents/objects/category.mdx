@@ -40,7 +40,7 @@ No description
 
 
 ```graphql
-type Category {
+type Category implements FussyEventReferenceEventableInterface {
   createdAt: ISO8601DateTime!
   furigana: String!
   id: Int!
@@ -74,6 +74,12 @@ type Category {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Category.<b>updatedAt</b></code>](#)<Bullet />[`ISO8601DateTime!`](/scalars/iso8601-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Interfaces
+
+#### [`FussyEventReferenceEventableInterface`](/interfaces/fussy-event-reference-eventable-interface) <Badge class="secondary" text="interface"/>
 > 
 > 
 
