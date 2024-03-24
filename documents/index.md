@@ -12,7 +12,7 @@ sidebar_class_name: navbar__toggle
 FUSSY の API をご利用いただくためのドキュメントです。
 
 ## FUSSY API とは
-株式会社 FUSSY は趣味に関する公開データベース、 [FUSSY](https://beta.fussy.fun) を運営しています。本ドキュメントで説明する FUSSY API は、FUSSY のデータベースへの投稿と取得を行うための API です。
+株式会社 FUSSY は趣味に関する公開データベース、 [FUSSY](https://www.fussy.fun) を運営しています。本ドキュメントで説明する FUSSY API は、FUSSY のデータベースへの投稿と取得を行うための API です。
 
 不具合に気づかれた際は [Issue](https://github.com/fussy-inc/docs/issues) でのご報告をお願いいたします。
 
@@ -24,7 +24,7 @@ FUSSY の API をご利用いただくためのドキュメントです。
 
 ## 認証
 
-投稿には認証が必要です。認証方法は [Misskey と同様の方法](https://misskey-hub.net/docs/api/)を採用しています。
+APIを使った投稿には認証(Access Token)が必要です。認証方法は [Misskey と同様の方法](https://misskey-hub.net/docs/api/)を採用しています。
 以下に、認証の方法と bash で行う例を記載します。
 
 ### 1.Session ID の発行
@@ -133,7 +133,4 @@ Category の追加のご要望は [https://forms.gle/SgYg8TQmtPsvP7Wy5](https://
 :::
 
 ## 参考実装
-実装の参考になるよう、次のリポジトリにサンプルを用意しています。
-聖地巡礼に関するデータの投稿と、訪問先でのチェックインに FUSSY API を利用しているサンプルです。
-
-[https://github.com/fussy-inc/nagori](https://github.com/fussy-inc/nagori)
+現在実装中です。
